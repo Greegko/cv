@@ -16,8 +16,8 @@ module.exports = {
   module: {
     rules: [
       {
-        resourceQuery: /\?inline$/,
-        type: "asset/inline",
+        resourceQuery: /\?source$/,
+        type: "asset/source",
       },
       {
         test: /\.scss$/,
@@ -25,7 +25,15 @@ module.exports = {
       },
       {
         test: /\.tsx?$/,
-        use: ["ts-loader"],
+        use: [
+          {
+            loader: "babel-loader",
+            options: {
+              presets: ["solid"],
+            },
+          },
+          "ts-loader",
+        ],
       },
     ],
   },
