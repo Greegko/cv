@@ -16,8 +16,8 @@ module.exports = {
   module: {
     rules: [
       {
-        resourceQuery: /\?source$/,
-        type: "asset/source",
+        resourceQuery: /\?binary$/,
+        use: ["arraybuffer-loader"],
       },
       {
         test: /\.scss$/,

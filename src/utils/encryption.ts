@@ -1,20 +1,14 @@
-import { Counter, ModeOfOperation, utils } from "aes-js";
+import { Counter, ModeOfOperation } from "aes-js";
 
 export type Key = number[];
 
-export function encode(key: Key, data: object): Uint8Array {
-  const text = JSON.stringify(data);
-  const textBytes = utils.utf8.toBytes(text);
-
+export function encrypt(key: Key, data: Uint8Array): Uint8Array {
+  // return data;
   const aesCtr = new ModeOfOperation.ctr(key, new Counter(5));
-  return aesCtr.encrypt(textBytes);
+  return aesCtr.encrypt(data);
 }
 
-export function decode(key: Key, data: Uint8Array): string {
+export function decrypt(key: Key, binaryData: Uint8Array): Uint8Array {
   const aesCtr = new ModeOfOperation.ctr(key, new Counter(5));
-  const jsonStringifiedDataBytes = aesCtr.decrypt(data);
-
-  const jsonStringifiedData = utils.utf8.fromBytes(jsonStringifiedDataBytes);
-
-  return JSON.parse(jsonStringifiedData);
+  return aesCtr.decrypt(binaryData);
 }
