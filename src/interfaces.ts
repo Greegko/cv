@@ -8,15 +8,17 @@ export interface CV {
   blocks: Block[];
 }
 
+export type DateString = `${number}-${number}-${number}`;
+
 export interface WorkExperience {
-  period: [Date, Date];
+  period: [DateString, DateString | null];
   company: string;
   location: string;
   position: string;
   responsibilities: string;
 }
 
-export type Table = [string, string][];
+export type Table = [string | number, string | string[]][];
 
 export interface TextBlock {
   title: string;
@@ -26,7 +28,7 @@ export interface TextBlock {
 
 export interface WorkExperienceBlock {
   title: string;
-  type: "work";
+  type: "work-experience";
   content: WorkExperience;
 }
 
