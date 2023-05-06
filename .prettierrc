@@ -2,13 +2,8 @@
   "trailingComma": "all",
   "printWidth": 120,
   "arrowParens": "avoid",
-  "importOrder": ["<THIRD_PARTY_MODULES>", "^\\.\\.?/.*(?<!scss)$", "scss"],
+  "importOrder": ["<THIRD_PARTY_MODULES>", "^\\.\\.?/.*(?<!s?css)$", "s?css$"],
   "importOrderSeparation": true,
-  "importOrderParserPlugins": [
-    "classProperties",
-    "typescript",
-    "decorators-legacy",
-    "jsx"
-  ],
+  "importOrderParserPlugins": ["classProperties", "typescript", "decorators-legacy", "jsx"],
   "importOrderSortSpecifiers": true
 }

@@ -20,8 +20,8 @@ module.exports = {
         use: ["arraybuffer-loader"],
       },
       {
-        test: /\.scss$/,
-        use: ["style-loader", "css-loader", "sass-loader"],
+        test: /\.s?css$/,
+        use: ["style-loader", "css-loader", "sass-loader", "postcss-loader"],
       },
       {
         test: /\.tsx?$/,
