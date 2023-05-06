@@ -1,4 +1,4 @@
-export interface CV {
+export interface CVData {
   "mobile-phone": string;
   email: string;
   residence: string;
