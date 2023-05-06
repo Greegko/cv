@@ -26,6 +26,12 @@ export interface TextBlock {
   content: string;
 }
 
+export interface QuoteBlock {
+  content: string;
+  type: "quote";
+  author: string;
+}
+
 export interface WorkExperienceBlock {
   title: string;
   type: "work-experience";
@@ -38,4 +44,4 @@ export interface TableBlock {
   content: Table;
 }
 
-export type Block = TextBlock | WorkExperienceBlock | TableBlock;
+export type Block = TextBlock | WorkExperienceBlock | TableBlock | QuoteBlock;
