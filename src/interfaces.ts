@@ -1,5 +1,6 @@
 export interface CVData {
-  "mobile-phone": string;
+  mobilePhone: string;
+  lastUpdate: DateString;
   email: string;
   residence: string;
   citizenship: string;
