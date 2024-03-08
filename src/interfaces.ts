@@ -36,7 +36,7 @@ export interface QuoteBlock {
 export interface WorkExperienceBlock {
   title: string;
   type: "work-experience";
-  content: WorkExperience;
+  content: WorkExperience[];
 }
 
 export interface TableBlock {

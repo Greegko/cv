@@ -73,14 +73,40 @@ const TextBlockView: Component<TextBlock> = ({ title, content }) => (
 const TableBlockView: Component<TableBlock> = ({ title, content }) => (
   <div>
     <div class="text-xl font-bold text-red-800 my-2 border-b border-black">{title}</div>
-    <div>{content}</div>
+    <div>
+      <For each={content}>
+        {columns => (
+          <div>
+            <div>{columns[0]}</div>
+            <div>{columns[1]}</div>
+          </div>
+        )}
+      </For>
+    </div>
   </div>
 );
 
 const WorkExperienceBlockView: Component<WorkExperienceBlock> = ({ title, content }) => (
   <div>
     <div class="text-xl font-bold text-red-800 my-2 border-b border-black">{title}</div>
-    <div>{}</div>
+    <div>
+      <For each={content}>
+        {workExperience => (
+          <div>
+            <div>Period:</div>
+            <div>
+              {workExperience.period[0]} - {workExperience.period[1]}
+            </div>
+            <div>Company:</div>
+            <div>{workExperience.company}</div>
+            <div>Position:</div>
+            <div>{workExperience.position}</div>
+            <div>Responsibilities:</div>
+            <div>{workExperience.responsibilities}</div>
+          </div>
+        )}
+      </For>
+    </div>
   </div>
 );
 
