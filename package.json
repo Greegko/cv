@@ -1,38 +1,17 @@
 {
   "scripts": {
-    "start": "webpack serve --config ./config/webpack-dev.config.js --progress",
-    "build": "webpack build --config ./config/webpack.config.js",
-    "encrypt": "ts-node ./ci.ts"
+    "start": "npm run start --prefix packages/web",
+    "build": "npm run build --prefix packages/web",
+    "encrypt": "npm run encrpyt --prefix packages/aws-lambda"
   },
+  "workspaces": [
+    "packages/*"
+  ],
   "dependencies": {
-    "@trivago/prettier-plugin-sort-imports": "4.1.1",
-    "aes-js": "3.1.2",
-    "arraybuffer-loader": "1.0.8",
-    "babel-loader": "9.1.2",
-    "babel-preset-solid": "1.7.4",
-    "node-sass": "8.0.0",
-    "postcss": "8.4.23",
-    "postcss-loader": "7.3.0",
-    "postcss-preset-env": "8.3.2",
-    "prettier": "2.8.8",
-    "ramda": "0.29.0",
-    "sass": "1.62.1",
-    "solid-js": "1.7.4",
-    "tailwindcss": "3.3.2",
-    "ts-loader": "9.4.2",
-    "ts-node": "10.9.1",
-    "webpack": "5.81.0"
+    "concurrently": "8.0.1"
   },
   "devDependencies": {
-    "@types/aes-js": "3.1.1",
-    "@types/node": "18.16.1",
-    "@types/ramda": "0.29.0",
-    "css-loader": "6.7.3",
-    "sass-loader": "13.2.2",
-    "source-map-loader": "4.0.1",
-    "style-loader": "3.3.2",
-    "typescript": "5.0.4",
-    "webpack-cli": "5.0.2",
-    "webpack-dev-server": "4.13.3"
+    "@trivago/prettier-plugin-sort-imports": "4.1.1",
+    "prettier": "2.8.8"
   }
 }

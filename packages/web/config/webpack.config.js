@@ -4,7 +4,7 @@ module.exports = {
 
   output: {
     filename: "bundle.js",
-    path: __dirname + "/../public",
+    path: __dirname + "/../src/public",
   },
 
   devtool: "source-map",
@@ -15,10 +15,6 @@ module.exports = {
 
   module: {
     rules: [
-      {
-        resourceQuery: /\?binary$/,
-        use: ["arraybuffer-loader"],
-      },
       {
         test: /\.s?css$/,
         use: ["style-loader", "css-loader", "sass-loader", "postcss-loader"],

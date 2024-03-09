@@ -1,6 +1,6 @@
 import { readFileSync, writeFileSync } from "fs";
 
-import { encrypt } from "./src/utils/encryption";
+import { encrypt } from "./encryption";
 
 const key = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16];
 
