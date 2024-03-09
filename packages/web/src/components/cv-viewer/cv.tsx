@@ -1,6 +1,6 @@
 import { Component, For } from "solid-js";
 
-import { CVData, DateString, QuoteBlock, TableBlock, TextBlock, WorkExperienceBlock } from "../../interfaces";
+import { CVData, DateString, QuoteBlock, TableBlock, TextBlock, WorkExperienceBlock } from "../../../../data";
 
 interface CVViewerProperties {
   cv: CVData;

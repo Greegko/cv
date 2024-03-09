@@ -1,8 +1,8 @@
 import { render } from "solid-js/web";
 
-import * as data from "../../aws-lambda/data/data.json";
+import { CVData } from "../../data";
+import * as data from "../../data/data/data.json";
 import { CVViewer } from "./components/cv-viewer/cv";
-import { CVData } from "./interfaces";
 
 import "./main.css";
 
