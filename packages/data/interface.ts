@@ -19,7 +19,6 @@ export interface WorkExperience {
   responsibilities: string;
 }
 
-
 export type Table = [string | number, string | string[]][];
 
 export interface TextBlock {
