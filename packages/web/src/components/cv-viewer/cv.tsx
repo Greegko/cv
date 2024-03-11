@@ -3,16 +3,16 @@ import { Component, For } from "solid-js";
 import { CVData, DateString, QuoteBlock, TableBlock, TextBlock, WorkExperienceBlock } from "../../../../data";
 
 interface CVViewerProperties {
-  cv: CVData;
+  data: CVData;
 }
 
-export const CVViewer: Component<CVViewerProperties> = ({ cv }) => (
-  <div class="container m-auto w-[850px] pt-[40px]">
-    <Header cv={cv} />
+export const CVContent: Component<CVViewerProperties> = ({ data }) => (
+  <div>
+    <Header data={data} />
 
     <div class="my-4"> </div>
 
-    <For each={cv.blocks}>
+    <For each={data.blocks}>
       {block => {
         if (block.type === "text") return <TextBlockView {...block} />;
         if (block.type === "work-experience") return <WorkExperienceBlockView {...block} />;
@@ -23,42 +23,42 @@ export const CVViewer: Component<CVViewerProperties> = ({ cv }) => (
 
     <div class="mb-4"></div>
 
-    <LastUpdateView date={cv.lastUpdate} />
+    <LastUpdateView date={data.lastUpdate} />
   </div>
 );
 
-const Header: Component<CVViewerProperties> = ({ cv }) => (
+const Header: Component<CVViewerProperties> = ({ data }) => (
   <div class="flex flex-row">
     <div class="grow">
-      <div class="text-3xl font-bold">{cv.name}</div>
+      <div class="text-3xl font-bold">{data.name}</div>
 
       <div class="columns-2 mt-4">
         <div class="mb-4">
           <div class="font-bold">Mobile Phone</div>
-          <div class="text-gray-500">{cv.mobilePhone}</div>
+          <div class="text-gray-500">{data.mobilePhone}</div>
         </div>
 
         <div class="mb-4">
           <div class="font-bold">Email Address</div>
           <div class="text-gray-500">
-            <a href={"mailto: " + cv.email}> {cv.email}</a>
+            <a href={"mailto: " + data.email}> {data.email}</a>
           </div>
         </div>
 
         <div class="mb-4">
           <div class="font-bold">Permanent Residence</div>
-          <div class="text-gray-500">{cv.residence}</div>
+          <div class="text-gray-500">{data.residence}</div>
         </div>
 
         <div class="mb-4">
           <div class="font-bold">Citizenship</div>
-          <div class="text-gray-500">{cv.citizenship}</div>
+          <div class="text-gray-500">{data.citizenship}</div>
         </div>
       </div>
     </div>
 
     <div class="flex-none self-center">
-      <img src={cv.image} fetchpriority="high" elementtiming={""} />
+      <img src="https://placehold.co/150x150" fetchpriority="high" elementtiming={""} />
     </div>
   </div>
 );
