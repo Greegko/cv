@@ -1,48 +1,47 @@
 export interface CVData {
-  mobilePhone: string;
+  personal: {
+    name: string;
+    position: string;
+    photo: string;
+    mobilePhone: string;
+    email: string;
+    swissPermit: string;
+    website: string;
+    linkedin: string;
+    github: string;
+    citizenship: string;
+    address: string;
+  };
+  languages: Scale[];
+  technicalSkills: Scale[];
+  softSkills: Scale[];
+  introduction: string;
+  quote: {
+    text: string;
+    author: string;
+  };
+  trainings: [DateString, string][];
+  workExperiences: WorkExperience[];
+  education: Education;
+  interests: string;
   lastUpdate: DateString;
-  email: string;
-  residence: string;
-  citizenship: string;
-  name: string;
-  image: string;
-  blocks: Block[];
 }
 
-export type DateString = `${number}-${number}-${number}`;
+export type DateString = number | `${number}` | `${number}-${number}` | `${number}-${number}-${number}`;
+
+export type Scale = [name: string, scale: 1 | 2 | 3 | 4 | 5, scaleText: string];
+
+export interface Education {
+  title: string;
+  period: [DateString, DateString | null];
+  highlights: string[];
+  tags: string[];
+}
 
 export interface WorkExperience {
-  period: [DateString, DateString | null];
-  company: string;
-  location: string;
+  title: string;
   position: string;
-  responsibilities: string;
+  period: [DateString, DateString | null];
+  highlights: string[];
+  tags: string[];
 }
-
-export type Table = [string | number, string | string[]][];
-
-export interface TextBlock {
-  title: string;
-  type: "text";
-  content: string;
-}
-
-export interface QuoteBlock {
-  content: string;
-  type: "quote";
-  author: string;
-}
-
-export interface WorkExperienceBlock {
-  title: string;
-  type: "work-experience";
-  content: WorkExperience[];
-}
-
-export interface TableBlock {
-  title: string;
-  type: "table";
-  content: Table;
-}
-
-export type Block = TextBlock | WorkExperienceBlock | TableBlock | QuoteBlock;
