@@ -1,10 +1,14 @@
 import { DynamoDB } from "@aws-sdk/client-dynamodb";
-import { DocumentClient } from "@aws-sdk/lib-dynamodb";
+import { DynamoDBDocumentClient, GetCommand, PutCommand } from "@aws-sdk/lib-dynamodb";
+import { randomUUID } from "crypto";
 import fs from "fs";
 import path from "path";
-import { v4 as uuidv4 } from "uuid";
+import { fileURLToPath } from "url";
 
-const dynamoDB = new DocumentClient({ client: new DynamoDB() });
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+const dynamoDB = DynamoDBDocumentClient.from(new DynamoDB());
 const dataFilePath = path.join(__dirname, "data.json");
 
 let jsonData;
@@ -16,9 +20,9 @@ try {
 }
 
 export const handler = async event => {
-  const providedKey = event.key;
+  const accessKey = event.queryStringParameters?.access_key;
 
-  if (!providedKey) {
+  if (!accessKey) {
     return {
       statusCode: 400,
       body: JSON.stringify("No key provided"),
@@ -26,20 +30,22 @@ export const handler = async event => {
   }
 
   try {
-    const keyResponse = await dynamoDB.get({
-      TableName: "AccessKeys",
-      Key: { api_key: providedKey },
-    });
+    const keyResponse = await dynamoDB.send(
+      new GetCommand({
+        TableName: "AccessKeys",
+        Key: { accessKey: accessKey },
+      }),
+    );
 
     if (!keyResponse.Item) {
-      await logAccess(providedKey, "Access Denied");
+      await logAccess(accessKey, "Access Denied");
       return {
         statusCode: 403,
         body: JSON.stringify("Invalid key"),
       };
     }
 
-    await logAccess(providedKey, "Access Granted");
+    await logAccess(accessKey, "Access Granted");
 
     return {
       statusCode: 200,
@@ -55,16 +61,18 @@ export const handler = async event => {
 };
 
 const logAccess = async (key, info) => {
-  const logId = uuidv4();
+  const logId = randomUUID();
   const timestamp = new Date().toISOString();
 
-  await dynamoDB.put({
-    TableName: "AccessLogs",
-    Item: {
-      log_id: logId,
-      timestamp: timestamp,
-      key: key,
-      info: info,
-    },
-  });
+  await dynamoDB.send(
+    new PutCommand({
+      TableName: "AccessLogs",
+      Item: {
+        log_id: logId,
+        timestamp: timestamp,
+        key: key,
+        info: info,
+      },
+    }),
+  );
 };

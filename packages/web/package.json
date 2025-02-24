@@ -2,7 +2,7 @@
   "type": "module",
   "scripts": {
     "start": "vite",
-    "build": "tsc && vite build"
+    "build": "vite build"
   },
   "dependencies": {
     "qr-creator": "1.0.0",
