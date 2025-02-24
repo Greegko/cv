@@ -1,0 +1,98 @@
+{
+  "name": "György Szauer",
+  "contact": {
+    "mobile": "+41/076-249-47-60",
+    "email": "greegko+work@gmail.com",
+    "residence": "Lausanne, Switzerland",
+    "citizenship": "Hungarian"
+  },
+  "introduction": "Programming is my main hobby. I like to design and create software solutions which are reliable and UX friendly. I have Fullstack experience with more focus on the Frontend side in Angular. My most familiar language is Javascript along with Typescript, but going along with any script languages (Python, Pine) or C++ / C# / Java. Reading daily and learning about team collaboration and self development subjects. Currently, as living in Lausanne, my primary goal is to speak French which I am learning autodidact at home. Also interested in investments and day trading.",
+  "work_experience": [
+    {
+      "date": "February 2020 - Present",
+      "company": "Evooq",
+      "location": "Lausanne, Switzerland",
+      "position": "Frontend developer",
+      "responsibilities": "Project in Finance about managing and trading structured product solutions. Investment application which handles automatic trades between issuers and end clients. Using gRPC for BE communication, and Angular for frontend."
+    },
+    {
+      "date": "Jun 2019 - October 2019",
+      "company": "Pix4D",
+      "location": "Lausanne, Switzerland",
+      "position": "Scrum Master",
+      "responsibilities": "Working as Scrum Master with 20% of my working time to support my team. Organizing events, analyzing the ongoing performance, collaborating with product owners, and facilitating the scrum meetings."
+    },
+    {
+      "date": "Jun 2018 - October 2019",
+      "company": "Pix4D",
+      "location": "Lausanne, Switzerland",
+      "position": "Frontend developer",
+      "responsibilities": "Working on two projects in parallel. One of them is creating and managing the company website which is based on React + Contentful stack supported by AWS CloudFront. The second application was based on Angular. We use Scrum and Jira for organizing the tasks."
+    },
+    {
+      "date": "November 2016 - May 2018",
+      "company": "Emarsys Technologies Kft",
+      "location": "Budapest, Hungary",
+      "position": "Frontend developer",
+      "responsibilities": "Developing Angular applications with Express and MongoDB on microservices. Continuous development and TDD to support quality. Reactive programming with a functional approach characterizes the code style. DevOps, XP, Atlassian (Confluence, JIRA)."
+    },
+    {
+      "date": "October 2014 - November 2016",
+      "company": "CAE Engineering Kft",
+      "location": "Budapest, Hungary",
+      "position": "Project Owner and Team Leader",
+      "responsibilities": "Managing multiple projects, providing a small team with technical support. Silverlight C# Web application, AngularJS web application with Bootstrap framework for the UI."
+    },
+    {
+      "date": "August 2013 - November 2016",
+      "company": "CAE Engineering Kft",
+      "location": "Budapest, Hungary",
+      "position": "Fullstack developer",
+      "responsibilities": "Creating and managing internal web pages (PHP5, Python2.x backend). Fortran to C++ migrations. Mentoring with script languages (Javascript, Python)."
+    },
+    {
+      "date": "September 2011 - December 2013",
+      "company": "LogMeIn",
+      "location": "Budapest, Hungary",
+      "position": "Internship - QA",
+      "responsibilities": "Testing and monitoring bug issues for Cubby web / desktop hybrid application, as well as creating reports for performance follow-up on release-based testing."
+    },
+    {
+      "date": "September 2010 - August 2013",
+      "company": "Remote Freelancer",
+      "location": "Budapest, Hungary",
+      "position": "Fullstack developer",
+      "responsibilities": "During my early school period, I worked as a part-time fullstack developer. Most used technologies: PHP5, MySQL, Symphony, Bootstrap, and JQuery / ExtJS for the UI."
+    }
+  ],
+  "education": {
+    "date": "September 2010 - May 2017",
+    "university": "Eötvös Loránd University",
+    "location": "Budapest, Hungary",
+    "degree": "Computer Science - Specialization in Software Development",
+    "thesis": "Online CV creator focuses on Angular 2, NodeJS backend with MongoDB"
+  },
+  "certifications": [
+    {
+      "year": 2019,
+      "certification": "Certified ScrumMaster"
+    },
+    {
+      "year": 2015,
+      "certification": "ISTQB - Foundation Certificate in Software Testing"
+    },
+    {
+      "year": 2010,
+      "certification": "Cisco CCNA"
+    }
+  ],
+  "languages": {
+    "native": "Hungarian",
+    "other": [
+      { "language": "English", "level": "Intermediate B2 Euroexam Certification" },
+      { "language": "French", "level": "Learning autodidact" }
+    ]
+  },
+  "programming_interests": "Application development in Angular or React environment, elaborating with Reactive programming and functional approaches in JavaScript along with TypeScript. Also interested in mobile/desktop hybrid applications.",
+  "hobbies": "I swim and do martial arts. Interested in psychology, body language, the human brain in subconscious states during hypnosis. My daily reading includes people/team management as well as self-development."
+}

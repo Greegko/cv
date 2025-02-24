@@ -1,14 +1,1 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-body {
-  font-family: Arimo;
-  font-size: 14px;
-}
-
-@media print {
-  @page {
-    margin: 0px;
-  }
-}
+@import "tailwindcss";

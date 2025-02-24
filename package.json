@@ -1,17 +1,6 @@
 {
-  "scripts": {
-    "start": "npm run start --prefix packages/web",
-    "build": "npm run build --prefix packages/web",
-    "encrypt": "npm run encrpyt --prefix packages/aws-lambda"
-  },
-  "workspaces": [
-    "packages/*"
-  ],
-  "dependencies": {
-    "concurrently": "8.0.1"
-  },
   "devDependencies": {
-    "@trivago/prettier-plugin-sort-imports": "4.3.0",
-    "prettier": "3.2.5"
+    "@trivago/prettier-plugin-sort-imports": "5.2.2",
+    "prettier": "3.5.2"
   }
 }
