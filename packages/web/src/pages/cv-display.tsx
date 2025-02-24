@@ -51,7 +51,6 @@ export const CvDisplayPage = (props: { data: CVData }) => (
         {props.data.education.location} ({props.data.education.date})
       </p>
       <p class="text-gray-700 mt-2 text-lg">{props.data.education.degree}</p>
-      <p class="text-gray-700 mt-2 text-lg">Thesis: {props.data.education.thesis}</p>
     </section>
 
     <section class="mt-4">

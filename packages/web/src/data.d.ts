@@ -19,7 +19,6 @@ interface Education {
   location: string;
   date: string;
   degree: string;
-  thesis: string;
 }
 
 interface Certification {

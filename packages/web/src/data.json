@@ -89,7 +89,6 @@
     "university": "Eötvös Loránd University",
     "location": "Budapest, Hungary",
     "degree": "Computer Science - Specialization in Software Development",
-    "thesis": "Online CV creator focuses on Angular 2, NodeJS backend with MongoDB",
     "tags": ["Computer Science", "Software Development", "Angular 2", "NodeJS", "MongoDB"]
   },
   "certifications": [
