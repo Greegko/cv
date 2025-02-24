@@ -12,11 +12,13 @@ async function getCvData(): Promise<CVData> {
     return localData.default;
   } else {
     const urlParams = new URLSearchParams(window.location.search);
-    const accessKey = urlParams.get("accessKey") as string;
+    const accessKey = urlParams.get("access_key") as string;
+
     if (!accessKey) return Promise.reject();
 
-    const response = await fetch(GetCVDataEndpoint + "?access_key=" + accessKey);
-    return response.json();
+    return fetch(GetCVDataEndpoint + "?access_key=" + accessKey)
+      .then(x => (x.ok ? x : Promise.reject()))
+      .then(x => x.json());
   }
 }
 
