@@ -1,5 +1,4 @@
-import CvComponent from "./component";
+import { CvComponent } from "./component";
+import data from "./data.json";
 
-import data from './data.json';
-
-export const App =() => <CvComponent data={data} />
+export const App = () => <CvComponent data={data} />;

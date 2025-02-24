@@ -10,6 +10,7 @@
     "noUnusedLocals": true,
     "noImplicitAny": false,
     "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
     "jsx": "preserve",
     "jsxImportSource": "solid-js"
   }

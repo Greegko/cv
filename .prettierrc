@@ -5,6 +5,6 @@
   "arrowParens": "avoid",
   "importOrder": ["<THIRD_PARTY_MODULES>", "^\\."],
   "importOrderSeparation": true,
-  "importOrderParserPlugins": ["classProperties", "typescript", "decorators-legacy"],
+  "importOrderParserPlugins": ["typescript", "jsx"],
   "importOrderSortSpecifiers": true
 }
