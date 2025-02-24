@@ -23,7 +23,7 @@ export const CvDisplayPage = (props: { data: CVData }) => (
       </div>
     </div>
 
-    <div class="lg:flex gap-2">
+    <div class="lg:flex gap-2 print:flex">
       <section class="flex-4 mt-2 lg:mt-0">
         <h2 class="text-xl font-bold text-blue-800">Introduction</h2>
         <p class="text-gray-700 mt-2 leading-relaxed">{props.data.introduction}</p>
