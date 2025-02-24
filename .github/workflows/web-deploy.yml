@@ -11,6 +11,7 @@ jobs:
         with:
           version: 9
       - run: pnpm build
+        working-directory: packages/web
 
       - name: push to ftp
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
