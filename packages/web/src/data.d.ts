@@ -11,6 +11,7 @@ interface WorkExperience {
   location: string;
   position: string;
   responsibilities: string;
+  tags: string[];
 }
 
 interface Education {
