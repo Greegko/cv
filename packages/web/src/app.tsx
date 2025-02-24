@@ -1,4 +1,7 @@
-import { CvComponent } from "./component";
 import data from "./data.json";
+import { CvDisplayPage } from "./pages/cv-display";
+import { ErrorPage } from "./pages/error";
 
-export const App = () => <CvComponent data={data} />;
+export const App = () => {
+  data ? <CvDisplayPage data={data} /> : <ErrorPage />;
+};
