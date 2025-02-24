@@ -6,11 +6,10 @@
     "residence": "Lausanne, Switzerland, Permit C",
     "citizenship": "Hungarian"
   },
-  "introduction": "Programming is my main hobby. I like to design and create software solutions which are reliable and UX friendly. I have professional Fullstack experience with more focus on the Frontend side in Angular. During my freetime happy to develop in different stack to extend knowledge.",
+  "introduction": "Programming is my main hobby. I like to design and create software solutions which are reliable, secure and UX friendly. My specialization focused on Frontend side to discover and develop among the cutting edge technologies. During my freetime happy to develop in different stack to extend knowledge.",
   "summary": [
-    "Fullstack experience with a focus on Frontend (Angular >8 years)",
-    "Passionate active developer",
-    "Specialied in TypeScript, NodeJS, Pine",
+    "Professional fullstack experience with a focus on Frontend stack Typescript, Angular (>8 years)",
+    "Focus provide value for user (heavy UX considerations), while keep code clean and maintainable for long term",
     "Value communication, teamwork and knowledge sharing",
     "Home projects in SolidJS, Tailwindcss, Game development, hybrid mobile development (JS focused)"
   ],
@@ -28,8 +27,8 @@
       "company": "Pix4D",
       "location": "Lausanne, Switzerland",
       "position": "Scrum Master",
-      "responsibilities": "Working as Scrum Master with 20% of my working time to support my team. Organizing events, analyzing the ongoing performance, collaborating with product owners, and facilitating the scrum meetings.",
-      "tags": ["Scrum Master", "Team Support", "Events", "Performance Analysis", "Collaboration"]
+      "responsibilities": "Working as Scrum Master with 20% of my working time to support my team. Organizing agile ceremonies, analyzing the ongoing performance, collaborating with product owners and give techincal support for stories.",
+      "tags": ["Scrum Master", "Performance Analysis"]
     },
     {
       "date": "Jun 2018 - October 2019",
@@ -44,19 +43,8 @@
       "company": "Emarsys Technologies Kft",
       "location": "Budapest, Hungary",
       "position": "Angular developer",
-      "responsibilities": "Developing Angular applications with Express and MongoDB on microservices. Continuous development and TDD to support quality. Reactive programming with a functional approach characterizes the code style. DevOps, XP, Atlassian (Confluence, JIRA).",
-      "tags": [
-        "Frontend",
-        "Angular",
-        "Express",
-        "MongoDB",
-        "Microservices",
-        "TDD",
-        "Reactive Programming",
-        "DevOps",
-        "XP",
-        "Atlassian"
-      ]
+      "responsibilities": "Developing Angular applications with Express and MongoDB on microservices. Continuous development and TDD to support quality. Reactive programming with a functional approach characterizes the code style.",
+      "tags": ["Frontend", "Angular", "Express", "MongoDB", "Microservices", "TDD", "DevOps", "eXtremeProgramming (XP)"]
     },
     {
       "date": "October 2014 - November 2016",
