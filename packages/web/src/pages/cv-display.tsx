@@ -4,7 +4,7 @@ import { QRCode } from "../components/qr-code";
 import { CVData } from "../data";
 
 export const CvDisplayPage = (props: { data: CVData }) => (
-  <div class="max-w-3xl mx-auto p-4 bg-gray-100 shadow-xl font-sans">
+  <div class="max-w-3xl mx-auto not-print:p-4 not-print:my-4 bg-gray-100 not-print:shadow-2xl font-sans">
     <div class="flex justify-between">
       <div>
         <h1 class="text-4xl font-extrabold text-blue-900 border-b-4 border-blue-500 pb-2">{props.data.name}</h1>
@@ -27,17 +27,21 @@ export const CvDisplayPage = (props: { data: CVData }) => (
     </section>
 
     <section class="mt-4">
-      <h2 class="text-2xl font-bold text-blue-800">Work Experience</h2>
+      <span class="text-2xl font-bold text-blue-800">Work Experience</span>
+      <span class="not-print:hidden text-gray-700 text-xs ml-2">(Only recent elements are visible in PDF mode)</span>
       <For each={props.data.work_experience}>
-        {job => (
-          <div class="mt-4 border-l-4 border-blue-400 pl-4 pb-4 break-inside-avoid">
+        {(job, index) => (
+          <div
+            class="mt-4 border-l-4 border-blue-400 pl-4 pb-4 break-inside-avoid"
+            classList={{ "print:hidden": index() > 2 }}
+          >
             <h3 class="text-xl font-semibold text-gray-900">
               {job.position} - {job.company}
             </h3>
-            <p class="text-gray-600 italic">
+            <p class="text-gray-600 italic text-sm">
               {job.location} ({job.date})
             </p>
-            <p class="text-xs text-gray-600 mt-2">{job.tags.map(x => "#" + x).join(", ")}</p>
+            <p class="text-xs text-gray-600 mt-1">{job.tags.map(x => "#" + x).join(", ")}</p>
             <p class="text-gray-700 mt-2 text-lg">{job.responsibilities}</p>
           </div>
         )}
