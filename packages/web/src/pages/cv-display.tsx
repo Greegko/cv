@@ -4,7 +4,7 @@ import { QRCode } from "../components/qr-code";
 import { CVData } from "../data";
 
 export const CvDisplayPage = (props: { data: CVData }) => (
-  <div class="lg:max-w-3xl lg:mx-auto not-print:p-4 lg:not-print:my-4 bg-gray-100 lg:not-print:shadow-2xl font-sans">
+  <div class="md:max-w-3xl md:mx-auto not-print:p-4 lg:not-print:my-4 bg-gray-100 md:not-print:shadow-2xl font-sans">
     <div class="flex justify-between">
       <div>
         <h1 class="text-4xl font-extrabold text-blue-900 border-b-4 border-blue-500 pb-2">{props.data.name}</h1>
@@ -23,12 +23,12 @@ export const CvDisplayPage = (props: { data: CVData }) => (
       </div>
     </div>
 
-    <div class="lg:flex gap-2 print:flex">
-      <section class="flex-4 mt-2 lg:mt-0">
+    <div class="md:flex gap-2 print:flex">
+      <section class="flex-4 mt-2 md:mt-0">
         <h2 class="text-xl font-bold text-blue-800">Introduction</h2>
         <p class="text-gray-700 mt-2 leading-relaxed">{props.data.introduction}</p>
       </section>
-      <section class="flex-5 mt-2 lg:mt-0">
+      <section class="flex-5 mt-2 md:mt-0">
         <h2 class="text-xl font-bold text-blue-800">Summary</h2>
         <ul class="list-disc pl-5 text-gray-700 leading-relaxed">
           <For each={props.data.summary}>{text => <li>{text}</li>}</For>
