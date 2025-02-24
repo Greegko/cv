@@ -1,5 +1,4 @@
 import { Show, createResource } from "solid-js";
-import { isDev } from "solid-js/web";
 
 import { CVData } from "./data";
 import { CvDisplayPage } from "./pages/cv-display";
@@ -8,7 +7,7 @@ import { ErrorPage } from "./pages/error";
 const GetCVDataEndpoint = "https://zx6yg9u8th.execute-api.eu-north-1.amazonaws.com/default/GetCVData";
 
 async function getCvData(): Promise<CVData> {
-  if (isDev) {
+  if (import.meta.env.DEV) {
     const localData = await import("../../lambda/data.json");
     return localData.default;
   } else {
