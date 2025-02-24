@@ -4,29 +4,31 @@ import { QRCode } from "../components/qr-code";
 import { CVData } from "../data";
 
 export const CvDisplayPage = (props: { data: CVData }) => (
-  <div class="max-w-3xl mx-auto not-print:p-4 not-print:my-4 bg-gray-100 not-print:shadow-2xl font-sans">
+  <div class="lg:max-w-3xl lg:mx-auto not-print:p-4 lg:not-print:my-4 bg-gray-100 lg:not-print:shadow-2xl font-sans">
     <div class="flex justify-between">
       <div>
         <h1 class="text-4xl font-extrabold text-blue-900 border-b-4 border-blue-500 pb-2">{props.data.name}</h1>
         <p class="text-gray-700 mt-2">
           {props.data.contact.residence} | {props.data.contact.citizenship}
         </p>
-        <p class="text-gray-700">
-          📞 {props.data.contact.mobile} | ✉️ {props.data.contact.email}
-        </p>
+        <div class="text-gray-700 flex flex-wrap gap-2">
+          <div>📞 {props.data.contact.mobile}</div>
+          <span class="hidden sm:block">|</span>
+          <div>✉️ {props.data.contact.email}</div>
+        </div>
       </div>
-      <div class="p-4">
+      <div class="p-2 not-sm:hidden">
         <QRCode text={window.location.href} size={80} />
         <span class="text-xs text-gray-400">Online version</span>
       </div>
     </div>
 
-    <div class="flex gap-2">
-      <section class="flex-4">
+    <div class="lg:flex gap-2">
+      <section class="flex-4 mt-2 lg:mt-0">
         <h2 class="text-xl font-bold text-blue-800">Introduction</h2>
         <p class="text-gray-700 mt-2 leading-relaxed">{props.data.introduction}</p>
       </section>
-      <section class="flex-5">
+      <section class="flex-5 mt-2 lg:mt-0">
         <h2 class="text-xl font-bold text-blue-800">Summary</h2>
         <ul class="list-disc pl-5 text-gray-700 leading-relaxed">
           <For each={props.data.summary}>{text => <li>{text}</li>}</For>
