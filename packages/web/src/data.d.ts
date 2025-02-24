@@ -35,6 +35,7 @@ export interface CVData {
   name: string;
   contact: Contact;
   introduction: string;
+  summary: string[];
   work_experience: WorkExperience[];
   education: Education;
   certifications: Certification[];

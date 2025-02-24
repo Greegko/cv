@@ -6,7 +6,14 @@
     "residence": "Lausanne, Switzerland, Permit C",
     "citizenship": "Hungarian"
   },
-  "introduction": "Programming is my main hobby. I like to design and create software solutions which are reliable and UX friendly. I have Fullstack experience with more focus on the Frontend side in Angular. My most familiar language is Javascript along with Typescript, but going along with any script languages (Python, Pine) or C++ / C# / Java. Reading daily and learning about team collaboration and self development subjects. Currently, as living in Lausanne, my primary goal is to speak French which I am learning autodidact at home. Also interested in investments and day trading.",
+  "introduction": "Programming is my main hobby. I like to design and create software solutions which are reliable and UX friendly. I have professional Fullstack experience with more focus on the Frontend side in Angular. During my freetime happy to develop in different stack to extend knowledge.",
+  "summary": [
+    "Fullstack experience with a focus on Frontend (Angular >8 years)",
+    "Passionate active developer",
+    "Specialied in TypeScript, NodeJS, Pine",
+    "Value communication, teamwork and knowledge sharing",
+    "Home projects in SolidJS, Tailwindcss, Game development, hybrid mobile development (JS focused)"
+  ],
   "work_experience": [
     {
       "date": "February 2020 - Present",
